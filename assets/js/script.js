@@ -8,6 +8,7 @@ let input = document.getElementById('email');
 
 form.addEventListener('submit' , (e) => {
 	let email = input.value.trim();
+	e.preventDefault();
 
 	let valid = false;
 	// simple validition 
@@ -16,14 +17,26 @@ form.addEventListener('submit' , (e) => {
 	}
 
 	if(!valid) {
-		e.preventDefault();
 		checkEmail();
 		input.focus();
 		return;
+	} else {
+		document.querySelector('.content').classList.add('hide');
+		document.querySelector('.success').classList.add('active');
+		document.querySelector('.email').textContent = email;
+		input.classList.remove('error-msg');
+		document.querySelector('.error').style.display= 'none';
+		input.value = '';
 	}
 
 })
 
+document.getElementById('btn').addEventListener('click', (e) => {
+
+	document.querySelector('.content').classList.remove('hide');
+		document.querySelector('.success').classList.remove('active');
+
+})
 
 function checkEmail() {
 	

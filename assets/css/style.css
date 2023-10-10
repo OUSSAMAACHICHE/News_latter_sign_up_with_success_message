@@ -161,6 +161,8 @@ form .error {
 	font-family: 'RobotoBold';
 	display: none;
 }
+
+
 /* Large screen  */
 @media (min-width: 992px) {
 
@@ -171,6 +173,7 @@ form .error {
 		padding: 20px;
 		width: 80%;
 		border-radius: 20px;
+		/* display: none; */
 	} 
 	body {
 		background-color: var(--DarkSlateGrey);
@@ -182,6 +185,10 @@ form .error {
 	.info {
 		width: 40%;
 	}
+	.image img {
+		display: none;
+	}
+	
 	.image {
 		background-image: url('../images/illustration-sign-up-desktop.svg');
 		background-repeat: no-repeat;
@@ -191,9 +198,7 @@ form .error {
 		width: 40%;
 		background-size: cover;
 	}
-	.image img {
-		display: none;
-	}
+	
 
 }
 /* extra large screen  */
@@ -210,3 +215,121 @@ form .error {
 	}
 
 }
+main.hide {
+	display: none;
+}
+
+
+
+/*Start success section*/
+.success {
+	padding: 30px;
+	width: 100%;
+	margin-top: 120px;
+	position: relative;
+	display: none;
+}
+.success img {
+	display: block;
+	width: 60px;
+}
+.success .title {
+	font-size: 2.4rem;
+	font-family: 'RobotoBold';
+	margin: 20px 0;
+	color: var(--CharcoalGrey);
+}
+.success .desc {
+	color: var(--CharcoalGrey);
+	line-height: 1.5;
+}
+.success .desc .email {
+	color: var(--DarkSlateGrey);
+	font-family: 'RobotoBold';
+	cursor: pointer;
+}
+.success button {
+	position: absolute;
+	bottom: -240px;
+	width: 80%;
+	padding: 20px;
+	border-radius: 10px;
+	border: none;
+	background-color: var(--DarkSlateGrey);
+	color: var(--White);
+	font-family: 'RobotoBold';
+	font-size: 1rem;
+	cursor: pointer;
+	transition: all .3s ease;
+}
+.success button:hover {
+	background-color: var(--Tomato);
+}
+@media (min-width: 768px) and (max-width: 991px){
+
+	
+	body {
+		display: block;
+
+	}
+	.success {
+		background-color: var(--White);
+		width: 45%;
+		border-radius: 20px;
+		padding: 45px;
+	}
+	.success button {
+		position:static;
+		bottom: 0;
+		padding: 10px ;
+		width: 100%;
+		margin-top: 20px;
+	}
+	.success img {
+		width: 40px;
+		margin-top: -10px;
+	}
+	.success .title {
+		line-height: 1;
+	}
+	
+}
+@media (min-width: 992px) {
+	.success {
+		background-color: var(--White);
+		width: 45%;
+		border-radius: 20px;
+		padding: 45px;
+	}
+	.success button {
+		position:static;
+		bottom: 0;
+		padding: 10px ;
+		width: 100%;
+		margin-top: 20px;
+	}
+	.success img {
+		width: 40px;
+		margin-top: -10px;
+	}
+	.success .title {
+		line-height: 1;
+	}
+}
+@media (min-width: 1080px) {
+	.success {
+		width: 35%;
+		margin-top: 0;
+	}
+	.success .title {
+		font-size: 3.3rem;
+	}
+	.success .desc {
+		font-size: 1.2rem;
+	}
+}
+
+.success.active {
+	display: block;
+}
+
